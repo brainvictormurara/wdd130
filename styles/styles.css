@@ -1,0 +1,51 @@
+/* --- Global & Main --- */
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Requirement: Parent selector 'main' for profile image */
+main img {
+    width: 150px;
+    height: auto;
+    border: 3px solid #007a33; /* Zimbabwe Green */
+    display: block;
+    margin: 10px auto;
+}
+
+/* --- Aside Element (The 6 Mandatory Properties) --- */
+aside {
+    width: 350px;              /* 1. width */
+    margin: 20px auto;         /* 2. margin */
+    border: 2px solid #ffd700; /* 3. border (Gold) */
+    padding: 20px;             /* 4. padding */
+    background-color: #f9f9f9; /* 5. background-color */
+    color: #333;               /* 6. color */
+    line-height: 1.6;
+}
+
+aside h2 {
+    color: #e12219; /* Zimbabwe Red */
+    text-align: center;
+}
+
+/* Specific image sizing for the aside */
+aside img {
+    width: 280px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Requirement: paragraph padding set to 0 */
+p {
+    padding: 0;
+}
+
+/* Requirement: Footer styling */
+footer {
+    margin-top: 40px;            /* 1. Top margin */
+    border-top: 2px solid #000;  /* 2. Top border */
+    text-align: center;          /* 3. Center align */
+    padding: 20px;
+}
