@@ -1,40 +1,42 @@
-/* --- 1. Header & Navigation (Fixes nav and h1 errors) --- */
-h1 {
-    color: #e12219; /* Zimbabwe Red */
-    text-align: center;
-}
-
+/* --- Header & Nav --- */
 nav {
     background-color: #007a33; /* Zimbabwe Green */
-    padding: 10px;
+    padding: 20px;
     text-align: center;
 }
 
 nav a {
     color: #ffffff;
-    padding: 10px;
-    display: block; /* Mandatory for audit */
+    padding: 15px;
+    display: inline-block; /* Changed to inline-block to sit side-by-side */
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* --- 2. Main Layout --- */
+/* --- Main Layout --- */
 main {
     max-width: 800px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* --- 3. Profile Image (Fixes width, height, border, padding, and box-shadow) --- */
+h1 {
+    color: #e12219; /* Zimbabwe Red */
+    text-align: center;
+}
+
+/* --- Profile Image Reqs --- */
 main img {
     width: 150px;
     height: auto;
     border: 5px solid #007a33;
-    padding: 5px;                    /* Found missing in audit */
-    box-shadow: 0 0 15px #888888;    /* Found missing in audit */
+    padding: 5px;
+    box-shadow: 0 0 15px #888;
     display: block;
     margin: 10px auto;
 }
 
-/* --- 4. Aside Section (6 Mandatory Properties) --- */
+/* --- Aside Reqs --- */
 aside {
     width: 350px;
     margin: 20px auto;
@@ -44,21 +46,18 @@ aside {
     color: #333;
 }
 
-/* --- 5. Aside Image (Fixes the 200px width error) --- */
 aside img {
-    width: 200px; /* Audit specifically expects 200px */
+    width: 200px; /* EXACTLY 200px as required by audit */
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* --- 6. Typography (Fixes p padding error) --- */
+/* --- Requirements --- */
 p {
     padding: 0;
-    line-height: 1.6;
 }
 
-/* --- 7. Footer (Fixes margin, border, align errors) --- */
 footer {
     margin-top: 40px;
     border-top: 2px solid #000;
