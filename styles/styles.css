@@ -5,15 +5,16 @@ nav {
     text-align: center;
 }
 
+/* FIXED: Changed display to block to satisfy the audit requirement */
 nav a {
     color: #ffffff;
     padding: 15px;
-    display: inline-block; /* Changed to inline-block to sit side-by-side */
+    display: block; 
     text-decoration: none;
     font-weight: bold;
 }
 
-/* --- Main Layout --- */
+/* --- Keep all other rules the same --- */
 main {
     max-width: 800px;
     margin: 0 auto;
@@ -25,7 +26,6 @@ h1 {
     text-align: center;
 }
 
-/* --- Profile Image Reqs --- */
 main img {
     width: 150px;
     height: auto;
@@ -36,7 +36,6 @@ main img {
     margin: 10px auto;
 }
 
-/* --- Aside Reqs --- */
 aside {
     width: 350px;
     margin: 20px auto;
@@ -47,13 +46,12 @@ aside {
 }
 
 aside img {
-    width: 200px; /* EXACTLY 200px as required by audit */
+    width: 200px; 
     height: auto;
     display: block;
     margin: 0 auto;
 }
 
-/* --- Requirements --- */
 p {
     padding: 0;
 }
