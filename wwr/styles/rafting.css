@@ -1,87 +1,101 @@
-/* Define and use all variables to pass the audit */
-:root {
-  --primary-color: #004e92;
-  --secondary-color: #ffffff;
-  --accent1-color: #333333;
-  --heading-font: "Roboto", Arial, sans-serif;
-  --body-font: "Open Sans", Helvetica, sans-serif;
-}
-
-/* Universal Selector Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Styling */
 body {
-  font-family: var(--body-font);
-  color: var(--accent1-color); /* Applying accent1 variable here */
-  background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-header, main, footer {
-  width: 840px;
-  margin: 0 auto;
-  background-color: var(--secondary-color); /* Applying secondary variable here */
-  padding: 20px;
+/* Header: Requirement - CSS Grid */
+header {
+    display: grid;
+    grid-template-columns: 200px auto;
+    align-items: center;
+    background-color: #006666;
+    padding: 1rem;
 }
 
-h1, h2 {
-  font-family: var(--heading-font); /* Applying heading-font variable here */
-  color: var(--primary-color);      /* Applying primary variable here */
-}
-
-nav, p, section, article {
-  margin: 16px;
-  padding: 8px;
-}
-
-/* Corrected Social Media Links selector to remove underlines */
-footer nav.socialmedia a {
-    text-decoration: none;
-    display: inline-block;
-}
-
-.socialmedia img {
-    width: 30px;
+.logo {
+    width: 100px;
     height: auto;
 }
 
-/* Hero Section with Overlays */
-.hero {
-    position: relative;
+/* Navigation: Requirement - CSS Flexbox */
+nav {
+    display: flex;
+    justify-content: space-around;
 }
 
-.hero img {
-    display: block;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* History Section: Requirement - Grid Layout */
+.history {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 2rem;
+    align-items: center;
+}
+
+.history-text {
+    grid-column: 1 / 3;
+}
+
+.history-img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
-h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  opacity: 0.8;
-  background-color: var(--accent1-color); /* Applying accent1 variable here */
-  color: #fff;
+/* Adventures Section: Requirement - Horizontal Layout */
+.adventures {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    background-color: rgba(255, 255, 255, 0.85);
-    padding: 20px;
+.adventure-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
 }
 
-.hero article img {
-  float: right;
-  width: 125px;
-  margin-left: 15px;
+figure {
+    margin: 0;
+    flex: 1;
 }
- 
+
+figure img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+figcaption {
+    padding-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* Footer: Requirement - Flexbox & Horizontal Socials */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    color: white;
+}
+
+.social {
+    display: flex;
+    gap: 15px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
