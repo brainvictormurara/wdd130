@@ -1,8 +1,7 @@
-/* --- Standards-Based Base Styles --- */
+/* --- High Contrast & Reset --- */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     line-height: 1.6;
     color: #1a1a1a;
     background-color: #ffffff;
@@ -13,58 +12,62 @@ header {
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: center;
-    background-color: #013220; /* Dark Green for AA Contrast */
+    background-color: #004d40; /* Dark Teal - AAA Contrast */
     padding: 15px 40px;
 }
 
-header img {
-    width: 150px;
-    height: auto;
-}
+header img { width: 140px; }
 
 /* --- Nav: REQUIRED CSS Flexbox --- */
 nav {
     display: flex;
-    justify-content: flex-end;
-    gap: 30px;
+    justify-content: space-around;
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff; /* Pass Contrast Audit */
+    color: #ffffff;
     font-weight: bold;
-    font-size: 1.1rem;
 }
 
-/* --- History Section: REQUIRED CSS Grid --- */
-.history {
+h1 { text-align: center; margin: 30px 0; color: #004d40; }
+
+/* --- Hero Section: 2 Column Grid (Text Left, Image Right) --- */
+.hero-section {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns like the wireframe */
-    gap: 40px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     padding: 40px;
-    align-items: start;
+    align-items: center;
 }
 
-.history-hero {
-    width: 100%;
-    border-radius: 8px;
+.hero-img { width: 100%; border-radius: 5px; }
+
+/* --- History Section: 3 Column Grid (Text - Image - Text) --- */
+.history-section {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
+    padding: 40px;
+    align-items: center;
+    text-align: center;
 }
 
-.history-inset {
-    width: 200px;
-    float: right; /* Floats within the second grid column */
-    margin: 10px 0 10px 20px;
+.history-img-middle {
+    width: 250px; /* Adjust based on your "relatively small" size */
+    height: auto;
+    border-radius: 5px;
 }
 
 /* --- Adventures Section: REQUIRED Flexbox for 5 Figures --- */
 .adventures {
-    padding: 50px 40px;
+    padding: 40px;
     text-align: center;
     background-color: #f4f4f4;
 }
 
 .adventure-gallery {
-    display: flex; /* The tool specifically scans for this property */
+    display: flex;
     justify-content: space-between;
     gap: 15px;
 }
@@ -78,31 +81,25 @@ figure {
 
 figure img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
 }
 
 figcaption {
     padding: 10px;
     font-weight: bold;
+    color: #004d40;
 }
 
-/* --- Footer: REQUIRED Flexbox --- */
+/* --- Footer: Flexbox --- */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 40px;
-    background-color: #013220;
+    padding: 20px 40px;
+    background-color: #004d40;
     color: #ffffff;
 }
 
-.social {
-    display: flex;
-    gap: 20px;
-}
-
-.social img {
-    width: 32px;
-    height: 32px;
-}
+.social { display: flex; gap: 20px; }
+.social img { width: 30px; }
