@@ -1,96 +1,93 @@
-/* --- General Reset & Accessibility Fixes --- */
+/* --- Global Styles & Contrast --- */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
     line-height: 1.6;
-    color: #1a1a1a; /* Dark text for contrast */
+    color: #222; /* Dark color for AA contrast check */
 }
 
-/* --- Header: REQUIRED CSS Grid --- */
+/* --- Header: Grid --- */
 header {
     display: grid;
-    grid-template-columns: 200px auto;
+    grid-template-columns: 150px 1fr;
     align-items: center;
-    background-color: #004d40; /* Dark Teal background */
+    background-color: #004d40; /* Dark teal background */
     padding: 20px;
 }
 
-header img {
-    width: 150px;
-}
+header img { width: 100px; }
 
-/* --- Nav: REQUIRED CSS Flexbox --- */
+/* --- Nav: Flex --- */
 nav {
     display: flex;
     justify-content: space-around;
 }
 
 nav a {
+    color: white; /* White on Dark Teal passes contrast audit */
     text-decoration: none;
-    color: #ffffff; /* White text on dark teal passes contrast audit */
     font-weight: bold;
 }
 
-/* --- History Section: CSS Grid --- */
+/* --- History Section: Grid --- */
 .history {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
     padding: 40px;
-    align-items: center;
+    align-items: start;
 }
 
-.history-content {
-    grid-column: 1 / 3;
-}
-
-.history-img {
+.history-main-img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 
-/* --- Adventures Section: REQUIRED Flexbox for 5 Figures --- */
+.history-sec-img {
+    width: 200px;
+    float: right;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+/* --- Adventures Section: Flex --- */
 .adventures {
-    padding: 40px;
     text-align: center;
-    background-color: #eeeeee;
+    padding: 40px;
+    background-color: #f4f4f4;
 }
 
 .adventure-gallery {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 figure {
     margin: 0;
     flex: 1;
-    background: white;
-    border-radius: 5px;
 }
 
 figure img {
     width: 100%;
-    height: 180px;
+    height: 150px;
     object-fit: cover;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
 }
 
 figcaption {
-    padding: 10px 0;
+    padding-top: 5px;
     font-weight: bold;
-    color: #004d40;
 }
 
-/* --- Footer: Flexbox --- */
+/* --- Footer: Flex --- */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #212121; /* Dark gray for footer */
+    background-color: #333;
     color: white;
 }
 
@@ -99,7 +96,4 @@ footer {
     gap: 15px;
 }
 
-.social img {
-    width: 30px;
-    height: 30px;
-}
+.social img { width: 25px; }
