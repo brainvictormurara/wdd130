@@ -1,5 +1,10 @@
-/* rafting.css */
+:root {
+  --primary-color: #0b3d91;
+  --accent-color: #f4a261;
+  --text-color: #000;
+}
 
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +13,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
+  color: var(--text-color);
 }
 
 /* HEADER GRID */
@@ -19,11 +24,6 @@ body {
   padding: 1rem;
 }
 
-.logo {
-  width: 80px;
-}
-
-/* NAV FLEX */
 .nav-flex {
   display: flex;
   justify-content: flex-end;
@@ -32,72 +32,73 @@ body {
 
 .nav-flex a {
   text-decoration: none;
-  color: #000;
-  font-weight: bold;
+  color: var(--text-color);
 }
 
-/* HERO */
+/* HERO FIXES (CRITICAL FOR AUDIT) */
 .hero {
-  text-align: center;
-  padding: 1rem;
+  position: relative;
 }
 
-.hero-img {
+.hero img {
   width: 100%;
-  height: auto;
+  display: block;
 }
 
-/* HISTORY GRID */
-.history {
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255,255,255,0.8);
+  padding: 1rem;
+  max-width: 400px;
+}
+
+.hero article img {
+  float: right;
+  width: 100px;
+  margin-left: 10px;
+}
+
+/* SECTIONS */
+section {
   padding: 1rem;
 }
 
-.history-grid {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  gap: 1rem;
-  align-items: center;
-}
-
-.history-grid img {
-  width: 150px;
-}
-
-/* ADVENTURES FLEX */
-.adventures {
-  padding: 1rem;
-}
-
-.adventure-flex {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.adventure-flex figure {
-  flex: 1;
+/* FIGURES */
+figure {
+  display: inline-block;
+  width: 18%;
   text-align: center;
 }
 
-.adventure-flex img {
+figure img {
   width: 100%;
-  height: auto;
 }
 
 /* FOOTER */
-.footer-flex {
+footer {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
 }
 
-.social {
+.socialmedia {
   display: flex;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
-.social img {
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
   width: 30px;
 }
