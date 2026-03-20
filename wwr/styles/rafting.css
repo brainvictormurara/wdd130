@@ -1,41 +1,49 @@
-/* --- Standards Reset --- */
+/* --- Standards-Based Base Styles --- */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #000000; /* Pure Black for contrast */
+    color: #1a1a1a; /* Very dark grey for contrast */
     background-color: #ffffff;
 }
 
 /* --- Header: REQUIRED CSS Grid --- */
 header {
     display: grid;
-    grid-template-columns: 180px 1fr;
+    grid-template-columns: 200px 1fr;
     align-items: center;
-    background-color: #004d40; /* Dark Teal - High Contrast */
-    padding: 15px 40px;
+    background-color: #004040; /* Deep Green - AAA Contrast with White */
+    padding: 10px 40px;
 }
 
 header img {
-    width: 140px;
+    width: 150px;
     height: auto;
 }
 
 /* --- Nav: REQUIRED CSS Flexbox --- */
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 30px;
 }
 
 nav a {
     text-decoration: none;
-    color: #ffffff; /* White on Dark Teal passes audit */
+    color: #ffffff; /* Pure white on dark green = Audit Pass */
     font-weight: bold;
+    font-size: 1.1rem;
 }
 
+nav a:hover {
+    color: #ffd700; /* Gold hover */
+}
+
+/* --- Main Heading --- */
 h1 {
     text-align: center;
+    color: #004040;
     margin: 40px 0;
 }
 
@@ -48,19 +56,20 @@ h1 {
     align-items: start;
 }
 
-.history-main-img {
+.history-hero {
     width: 100%;
     border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-.history-inset-img {
-    width: 200px;
+.history-inset {
+    width: 220px;
     float: right;
-    margin: 10px 0 10px 15px;
+    margin: 10px 0 10px 20px;
     border-radius: 4px;
 }
 
-/* --- Adventures Section: REQUIRED Flexbox --- */
+/* --- Adventures Section: REQUIRED Flexbox for 5 Figures --- */
 .adventures {
     padding: 50px 40px;
     text-align: center;
@@ -68,7 +77,7 @@ h1 {
 }
 
 .adventure-gallery {
-    display: flex; /* The tool specifically looks for this */
+    display: flex; /* Mandatory Flexbox for Audit */
     justify-content: space-between;
     gap: 15px;
     margin-top: 20px;
@@ -90,7 +99,7 @@ figure img {
 figcaption {
     padding: 10px;
     font-weight: bold;
-    color: #004d40;
+    color: #004040;
 }
 
 /* --- Footer: REQUIRED Flexbox --- */
@@ -98,8 +107,8 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 40px;
-    background-color: #004d40;
+    padding: 20px 40px;
+    background-color: #004040;
     color: #ffffff;
 }
 
