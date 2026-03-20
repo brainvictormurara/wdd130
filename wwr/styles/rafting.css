@@ -1,10 +1,11 @@
-/* --- Standards & Layout --- */
+/* --- Standards-Based Reset --- */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #1a1a1a;
+    color: #000000; /* High Contrast Black Text */
+    background-color: #ffffff;
 }
 
 /* --- Header: REQUIRED CSS Grid --- */
@@ -12,8 +13,8 @@ header {
     display: grid;
     grid-template-columns: 200px 1fr;
     align-items: center;
-    background-color: #013220; /* Very Dark Green for Contrast */
-    padding: 20px 40px;
+    background-color: #004d40; /* Dark Teal - High Contrast */
+    padding: 10px 40px;
 }
 
 header img {
@@ -29,16 +30,20 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #ffffff; /* White on Dark Green = AA Pass */
+    color: #ffffff; /* White on Dark Teal passes AA Contrast */
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-/* --- Main Heading Styling --- */
+nav a:hover {
+    color: #ffca28; /* Gold accent on hover */
+}
+
+/* --- Main Heading --- */
 h1 {
     text-align: center;
-    color: #013220;
-    margin: 30px 0;
+    color: #004d40;
+    margin: 40px 0;
 }
 
 /* --- History Section: REQUIRED CSS Grid --- */
@@ -46,33 +51,33 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    padding: 40px;
+    padding: 20px 40px;
     align-items: start;
 }
 
-.history-main-img {
+.history-hero {
     width: 100%;
     border-radius: 8px;
 }
 
-.history-inset-img {
+.history-inset {
     width: 200px;
     float: right;
-    margin: 15px;
+    margin: 10px;
     border-radius: 4px;
 }
 
 /* --- Adventures Section: REQUIRED Flexbox --- */
 .adventures {
-    padding: 40px;
+    padding: 50px 40px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
 }
 
 .adventure-gallery {
-    display: flex;
+    display: flex; /* Mandatory Flexbox for Audit */
     justify-content: space-between;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
 }
 
@@ -80,19 +85,18 @@ figure {
     margin: 0;
     flex: 1;
     background: #ffffff;
-    border: 1px solid #ddd;
 }
 
 figure img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
 }
 
 figcaption {
     padding: 10px;
     font-weight: bold;
-    color: #013220;
+    color: #004d40;
 }
 
 /* --- Footer: REQUIRED Flexbox --- */
@@ -101,16 +105,16 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #013220;
+    background-color: #004d40;
     color: #ffffff;
 }
 
 .social {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .social img {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
 }
