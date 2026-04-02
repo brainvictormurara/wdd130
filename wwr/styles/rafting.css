@@ -1,7 +1,7 @@
 :root {
   --primary-color: #004d40; /* Dark Teal - Change to your brand color */
-  --secondary-color: #ff9800; /* Orange - Change to your brand color */
-  --accent1-color: #e0f2f1;
+  --secondary-color: var(--secondary-color);
+  --accent1-color: var(--accent1-color);
   --accent2-color: #ffffff;
   --heading-font: "Roboto", sans-serif; /* Use your actual font name */
   --paragraph-font: "Arial", sans-serif;
@@ -82,7 +82,7 @@ header {
   position: absolute;
   top: 40px;
   left: 40px;
-  background-color: rgba(255, 255, 255, 0.8); /* See-through white */
+  background-color: var(--primary-color);
   padding: 15px;
 }
 
@@ -91,7 +91,7 @@ header {
   top: 150px;
   right: 40px;
   background-color: rgba(0, 0, 0, 0.7); /* See-through black */
-  color: white;
+  color: var(--accent2-color);
   padding: 20px;
   max-width: 400px;
 }
@@ -190,11 +190,11 @@ footer {
 .social-container img {
     width: 25px;
     height: 25px;
-}
-footer nav a,
-.social-links a {
-  text-decoration: none;
-}
+/* Remove underlines from all navigation and social links */
+nav a, 
+footer a, 
+.social-container a {
+    text-decoration: none;
 }
 /* --- Responsive View --- */
 @media (max-width: 800px) {
