@@ -1,8 +1,10 @@
 :root {
-  --primary-color: #004d40; /* Replace with your dark teal/green */
-  --accent-color: #ff9800;  /* Replace with your orange/accent */
-  --text-color: #333333;
-  --white: #ffffff;
+  --primary-color: #004d40; /* Dark Teal - Change to your brand color */
+  --secondary-color: #ff9800; /* Orange - Change to your brand color */
+  --accent1-color: #e0f2f1;
+  --accent2-color: #ffffff;
+  --heading-font: "Roboto", sans-serif; /* Use your actual font name */
+  --paragraph-font: "Arial", sans-serif;
 }
 /* --- WDD Standards: Reset & Global Styles --- */
 * {
@@ -69,36 +71,36 @@ header {
 
 /* --- Hero Section: CSS Grid (Text Left, Image Right) --- */
 .hero-container {
-  .hero {
-  position: relative; /* The 'base' */
+  /* The 'Base' container */
+.hero {
+  position: relative;
   display: block;
 }
 
-.hero article img {
-  float: right; /* The audit specifically looks for this word */
-  width: 100px;
-  margin-left: 15px;
-
-}
-
+/* The 'Stickers' that float on top */
 .hero h1 {
-  position: absolute; /* The 'sticker' */
-  top: 50px;
-  left: 50px;
-  background-color: rgba(255, 255, 255, 0.7); /* Optional: makes it readable */
-  padding: 10px;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* See-through white */
+  padding: 15px;
 }
 
 .hero article {
-  position: absolute; /* The 'sticker' */
-  bottom: 30px;
-  right: 30px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: var(--white);
+  position: absolute;
+  top: 150px;
+  right: 40px;
+  background-color: rgba(0, 0, 0, 0.7); /* See-through black */
+  color: white;
   padding: 20px;
   max-width: 400px;
 }
 
+.hero article img {
+  float: right;
+  width: 150px;
+  margin: 0 0 10px 10px;
+}
 /* --- History Section: CSS Grid (3 Columns) --- */
 .history-section {
     padding: 60px 5%;
@@ -189,9 +191,10 @@ footer {
     width: 25px;
     height: 25px;
 }
-footer nav a, 
-.sociallinks a {
-  text-decoration: none; /* Removes the underline */
+footer nav a,
+.social-links a {
+  text-decoration: none;
+}
 }
 /* --- Responsive View --- */
 @media (max-width: 800px) {
