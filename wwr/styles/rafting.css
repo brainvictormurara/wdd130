@@ -132,6 +132,15 @@ header {
 .history-img-center img {
     border-radius: 8px;
     width: 100%;
+    /* Use the light blue for the background of your history section */
+.history-container, .history {
+    background-color: var(--accent1-color);
+}
+
+/* Use the orange for link hovers */
+nav a:hover, 
+footer a:hover {
+    color: var(--secondary-color);
 }
 
 /* --- Adventures Section: Flexbox (5 Images) --- */
@@ -203,8 +212,7 @@ footer {
     width: 25px;
     height: auto;
 }
-
-/* 2. Remove the underlines (This clears the Media Links error) */
+/* Remove !important - just use the regular property */
 .socialmedia a, 
 nav a, 
 footer a {
