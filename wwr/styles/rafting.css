@@ -18,6 +18,16 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #fff;
+    /* 1. Use the accent1-color (light blue) for your history section background */
+.history-container, .history {
+    background-color: var(--accent1-color);
+}
+
+/* 2. Use the secondary-color (orange) for link hover effects */
+nav a:hover, 
+footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 img {
