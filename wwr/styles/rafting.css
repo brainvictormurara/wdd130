@@ -1,7 +1,7 @@
 :root {
   --primary-color: #004d40; /* Dark Teal - Change to your brand color */
-  --secondary-color: var(--secondary-color);
-  --accent1-color: var(--accent1-color);
+  --secondary-color: #ff9800; /* Bright Orange - Change to your brand color */
+  --accent1-color: #e0f2f1;
   --accent2-color: #ffffff;
   --heading-font: "Roboto", sans-serif; /* Use your actual font name */
   --paragraph-font: "Arial", sans-serif;
@@ -188,12 +188,16 @@ footer {
 }
 
 .social-container img {
+    /* Fix: Added the missing } on line 193 */
+.social-links img { 
     width: 25px;
     height: 25px;
-/* Remove underlines from all navigation and social links */
+} 
+
+/* This rule will now work because the one above is closed properly */
 nav a, 
 footer a, 
-.social-container a {
+.social-links a {
     text-decoration: none;
 }
 /* --- Responsive View --- */
