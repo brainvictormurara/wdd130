@@ -188,16 +188,16 @@ footer {
 }
 
 .social-container img {
-    /* Fix: Added the missing } on line 193 */
-.social-links img { 
+/* 1. Size the social icons */
+.socialmedia img {
     width: 25px;
-    height: 25px;
-} 
+    height: auto;
+}
 
-/* This rule will now work because the one above is closed properly */
+/* 2. Remove the underlines (This clears the Media Links error) */
+.socialmedia a, 
 nav a, 
-footer a, 
-.social-links a {
+footer a {
     text-decoration: none;
 }
 /* --- Responsive View --- */
@@ -209,4 +209,10 @@ footer a,
     }
     .nav-container { justify-content: center; margin-top: 15px; }
     .hero-img-box { order: -1; }
+h1, h2, h3, h4 {
+    font-family: var(--heading-font);
+}
+
+p {
+    font-family: var(--paragraph-font);
 }
