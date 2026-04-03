@@ -19,7 +19,7 @@ body {
     font-family: var(--paragraph-font);
     line-height: 1.6;
     color: #333;
-    background-color: var(--accent2-color); /* Uses accent2 instead of the word 'white' */
+    background-color: var(--accent2-color); /* Standardization: No named colors */
 }
 
 h1, h2, h3, h4 {
@@ -33,12 +33,12 @@ img {
 }
 
 /* --- 3. Fixing Unused Variables (Audit Requirement) --- */
-/* This uses --accent1-color for the background */
+/* This uses --accent1-color */
 .history-container, .history-section, main {
     background-color: var(--accent1-color);
 }
 
-/* This uses --secondary-color for link hovers */
+/* This uses --secondary-color */
 nav a:hover, 
 footer a:hover,
 .socialmedia a:hover {
@@ -93,6 +93,13 @@ header {
     max-width: 400px;
 }
 
+/* The Float Fix you requested */
+.hero article img {
+    float: right;
+    width: 150px;
+    margin: 0 0 10px 10px;
+}
+
 /* --- 6. Footer & Social Media (Fixed Duplicates & Underlines) --- */
 footer {
     display: flex;
@@ -113,7 +120,7 @@ footer {
     height: auto;
 }
 
-/* Removed !important to pass CSS Validation and combined duplicate selectors */
+/* Audit Requirement: No !important tags allowed */
 .socialmedia a, 
 nav a, 
 footer a {
