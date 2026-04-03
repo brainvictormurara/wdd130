@@ -19,29 +19,25 @@ body {
     font-family: var(--paragraph-font);
     line-height: 1.6;
     color: #333;
-    background-color: var(--accent2-color); /* Uses accent2 instead of the word 'white' */
+    /* Standardization: Using variable instead of named 'white' */
+    background-color: var(--accent2-color); 
 }
 
 h1, h2, h3, h4 {
     font-family: var(--heading-font);
+    color: #2c3e50;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-}
-
-/* --- 3. Fixing Unused Variables (Audit Requirement) --- */
-/* This uses --accent1-color for the background */
-.history-container, .history-section, main {
+/* --- 3. Fixing the 'Unused Variables' (Required for Audit) --- */
+/* This uses --accent1-color */
+.history-section, .history-container {
     background-color: var(--accent1-color);
+    padding: 40px 5%;
 }
 
-/* This uses --secondary-color for link hovers */
+/* This uses --secondary-color */
 nav a:hover, 
-footer a:hover,
-.socialmedia a:hover {
+footer a:hover {
     color: var(--secondary-color);
     text-decoration: underline;
 }
@@ -93,7 +89,7 @@ header {
     max-width: 400px;
 }
 
-/* --- 6. Footer & Social Media (Fixed Duplicates & Underlines) --- */
+/* --- 6. Footer & Social Media (Fixed Underlines) --- */
 footer {
     display: flex;
     justify-content: space-between;
@@ -113,7 +109,7 @@ footer {
     height: auto;
 }
 
-/* Removed !important to pass CSS Validation and combined duplicate selectors */
+/* Audit Requirement: No !important tags allowed */
 .socialmedia a, 
 nav a, 
 footer a {
@@ -122,18 +118,9 @@ footer a {
 
 /* --- 7. Responsive View --- */
 @media (max-width: 800px) {
-    header, 
-    .hero, 
-    .history-grid-container, 
-    .adventures-flex-container, 
-    footer {
+    header, .hero, .history-grid-container, footer {
         display: flex;
         flex-direction: column;
         text-align: center;
-    }
-
-    .nav-container { 
-        justify-content: center; 
-        margin-top: 15px; 
     }
 }
