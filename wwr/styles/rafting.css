@@ -145,3 +145,7 @@ footer a {
     }
     .nav-container { justify-content: center; margin-top: 15px; }
 }
+/* This does the same thing as the inline style, but in the right place! */
+iframe {
+    border: none;
+}
