@@ -1,12 +1,11 @@
-/* --- 1. Variables --- */
+/* --- 1. Variables (REDUCED TO 3 COLORS) --- */
 :root {
-    --primary-color: #004d40; 
-    --secondary-color: #af5000; 
-    --accent1-color: #e0f2f1;
-    --accent2-color: #ffffff;
+    --primary-color: #004d40;   /* dark green */
+    --secondary-color: #af5000; /* orange */
+    --accent-color: #ffffff;    /* white */
+
     --heading-font: "Roboto", sans-serif; 
     --paragraph-font: "Arial", sans-serif;
-    --hero-bg-color: rgba(0, 77, 64, 0.8); /* Added for transparency */
 }
 
 /* --- 2. Global Styles --- */
@@ -20,7 +19,7 @@ body {
     font-family: var(--paragraph-font);
     line-height: 1.6;
     color: var(--primary-color);
-    background-color: var(--accent2-color); 
+    background-color: var(--accent-color);
 }
 
 h1, h2, h3, h4 {
@@ -41,8 +40,8 @@ header {
     grid-template-columns: 150px 1fr;
     align-items: center;
     padding: 20px 5%;
-    background-color: var(--accent2-color); 
-    border-bottom: 1px solid #eee;
+    background-color: var(--accent-color);
+    border-bottom: 1px solid #ccc;
 }
 
 .nav-container {
@@ -58,14 +57,13 @@ header {
 }
 
 .nav-container a:hover {
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     text-decoration: underline;
 }
 
-/* --- 4. Hero Section (Position: Absolute) --- */
+/* --- 4. Hero Section (REQUIRED POSITIONING) --- */
 .hero {
     position: relative;
-    display: block;
 }
 
 .hero h1 {
@@ -73,47 +71,63 @@ header {
     top: 30px;
     left: 30px;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--accent-color);
     padding: 15px;
-    font-size: 2rem;
 }
 
 .hero article {
     position: absolute;
     bottom: 30px;
     right: 30px;
-    color: var(--accent2-color);
-    padding: 25px;
-    max-width: 450px;
-    background-color: var(--hero-bg-color);
-    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    padding: 20px;
+    max-width: 400px;
 }
 
-/* --- 5. Grid Layouts (Home & Trips) --- */
+/* --- 5. CTA BUTTON (MISSING BEFORE - NOW FIXED) --- */
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    opacity: 0.9;
+}
+
+/* --- 6. Grid Layouts --- */
 .home-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     padding: 50px 5%;
-    background-color: var(--accent2-color);
+}
+
+.trips-grid { /* NEW - required separation */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 50px 5%;
 }
 
 .card {
-    border: 1px solid #eee;
+    border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-    background-color: var(--accent1-color);
 }
 
-/* --- 6. Newsletter Form --- */
+/* --- 7. Newsletter --- */
 .newsletter {
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--accent-color);
     padding: 40px 5%;
     text-align: center;
 }
-
-.newsletter h2 { color: var(--accent2-color); }
 
 .newsletter form {
     display: flex;
@@ -124,58 +138,45 @@ header {
 
 .newsletter input {
     padding: 10px;
-    border-radius: 4px;
     border: none;
     width: 250px;
 }
 
-/* --- 7. Trips Page Table --- */
+/* --- 8. Trips Page Specific (MISSING BEFORE) --- */
+.trips-intro {
+    text-align: center;
+    padding: 50px 5%;
+}
+
+.table-section {
+    padding: 50px 5%;
+}
+
+/* --- 9. Table --- */
 .trips-table {
     width: 90%;
-    margin: 40px auto;
+    margin: 0 auto;
     border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 .trips-table th, .trips-table td {
-    padding: 15px;
-    border: 1px solid #ddd;
-    text-align: left;
+    padding: 12px;
+    border: 1px solid #ccc;
 }
 
 .trips-table th {
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--accent-color);
 }
 
-.trips-table tr:nth-child(even) {
-    background-color: var(--accent1-color);
-}
-
-/* --- 8. Contact Form Styling --- */
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.form-item { margin-bottom: 20px; }
-
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* --- 9. Footer & Socials --- */
+/* --- 10. Footer --- */
 footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 5%;
     background-color: var(--primary-color);
-    color: var(--accent2-color);
+    color: var(--accent-color);
 }
 
 .socialmedia {
@@ -185,19 +186,22 @@ footer {
 
 .socialmedia img {
     width: 30px;
-    transition: transform 0.3s;
 }
 
-.socialmedia img:hover { transform: scale(1.1); }
-
-/* --- 10. Responsive View --- */
+/* --- 11. Responsive --- */
 @media (max-width: 800px) {
-    header { grid-template-columns: 1fr; }
-    .nav-container { justify-content: center; margin-top: 15px; }
-    
-    .hero h1, .hero article {
+    header {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-container {
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero h1,
+    .hero article {
         position: static;
-        max-width: 100%;
         text-align: center;
     }
 
