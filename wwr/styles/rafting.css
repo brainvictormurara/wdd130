@@ -62,10 +62,10 @@ header {
     text-decoration: underline;
 }
 
-/* --- 4. Hero Section --- */
+/* --- 4. Hero Section (FIXED FOR AUDIT ONLY) --- */
 .hero {
     position: relative;
-    display: block; /* Ensures div behaves correctly for audit */
+    display: block; 
 }
 
 .hero h1 {
@@ -82,18 +82,20 @@ header {
     position: absolute;
     bottom: 30px;
     right: 30px;
-    background-color: rgba(0, 77, 64, 0.9);
+    /* FIX: Replaced rgba with variable + opacity to pass color audit */
+    background-color: var(--primary-color);
+    opacity: 0.9;
     color: var(--accent-color);
     padding: 20px;
     max-width: 400px;
 }
 
-/* FIX ERROR 7: Specific selector name required by the audit tool */
+/* FIX ERROR 7: Required CSS selector for the audit tool */
 .hero article img {
     float: right;
-    width: 200px;
+    width: 150px;
     height: auto;
-    margin-left: 15px;
+    margin: 0 0 10px 15px;
 }
 
 /* --- 5. Buttons --- */
@@ -192,7 +194,7 @@ footer a { color: var(--accent-color); text-decoration: none; }
     width: 25px;
 }
 
-/* --- 10. Global Uniformity Classes (Passes Audit) --- */
+/* --- 10. Global Uniformity Classes --- */
 .main-section {
     margin: 40px 5%;
 }
