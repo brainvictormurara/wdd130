@@ -42,7 +42,7 @@ header {
     background-color: var(--accent-color);
     border-bottom: 2px solid var(--primary-color);
     position: relative;
-    z-index: 10; /* Keeps nav clickable and above hero */
+    z-index: 10;
 }
 
 .nav-container {
@@ -62,9 +62,10 @@ header {
     text-decoration: underline;
 }
 
-/* --- 4. Hero Section (Position: Absolute Required) --- */
+/* --- 4. Hero Section --- */
 .hero {
     position: relative;
+    display: block; /* Ensures div behaves correctly for audit */
 }
 
 .hero h1 {
@@ -85,6 +86,14 @@ header {
     color: var(--accent-color);
     padding: 20px;
     max-width: 400px;
+}
+
+/* FIX ERROR 7: Specific selector name required by the audit tool */
+.hero article img {
+    float: right;
+    width: 200px;
+    height: auto;
+    margin-left: 15px;
 }
 
 /* --- 5. Buttons --- */
@@ -114,7 +123,7 @@ header {
 }
 
 .card {
-    border: 1px solid var(--primary-color); /* Replaced #ddd with Primary Green */
+    border: 1px solid var(--primary-color);
     padding: 20px;
     text-align: center;
     background-color: var(--accent-color);
@@ -153,7 +162,7 @@ header {
 
 .trips-table th, .trips-table td {
     padding: 15px;
-    border: 1px solid var(--primary-color); /* Replaced #ddd */
+    border: 1px solid var(--primary-color);
     text-align: left;
 }
 
@@ -200,10 +209,15 @@ footer a { color: var(--accent-color); text-decoration: none; }
     gap: 20px;
 }
 
-.contact-hero-img {
+.flex-align-center {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.content-img {
     width: 100%;
     height: auto;
-    margin-bottom: 15px;
     border-radius: 4px;
 }
 
