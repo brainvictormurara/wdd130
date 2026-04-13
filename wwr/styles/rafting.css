@@ -1,8 +1,8 @@
-/* --- 1. Variables (REDUCED TO 3 COLORS) --- */
+/* --- 1. Variables (3 COLORS ONLY) --- */
 :root {
-    --primary-color: #004d40;   /* dark green */
-    --secondary-color: #af5000; /* orange */
-    --accent-color: #ffffff;    /* white */
+    --primary-color: #004d40;   /* Dark Green */
+    --secondary-color: #af5000; /* Orange */
+    --accent-color: #ffffff;    /* White */
 
     --heading-font: "Roboto", sans-serif; 
     --paragraph-font: "Arial", sans-serif;
@@ -25,7 +25,6 @@ body {
 h1, h2, h3, h4 {
     font-family: var(--heading-font);
     color: var(--secondary-color);
-    margin-bottom: 1rem;
 }
 
 img {
@@ -41,7 +40,7 @@ header {
     align-items: center;
     padding: 20px 5%;
     background-color: var(--accent-color);
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2px solid var(--primary-color);
 }
 
 .nav-container {
@@ -61,7 +60,7 @@ header {
     text-decoration: underline;
 }
 
-/* --- 4. Hero Section (REQUIRED POSITIONING) --- */
+/* --- 4. Hero Section (Position: Absolute Required) --- */
 .hero {
     position: relative;
 }
@@ -73,31 +72,35 @@ header {
     background-color: var(--primary-color);
     color: var(--accent-color);
     padding: 15px;
+    opacity: 0.9;
 }
 
 .hero article {
     position: absolute;
     bottom: 30px;
     right: 30px;
-    background-color: var(--primary-color);
+    background-color: rgba(0, 77, 64, 0.9); /* Transparent primary */
     color: var(--accent-color);
     padding: 20px;
     max-width: 400px;
 }
 
-/* --- 5. CTA BUTTON (MISSING BEFORE - NOW FIXED) --- */
+/* --- 5. Buttons --- */
 .cta-button {
     display: inline-block;
-    padding: 12px 20px;
+    padding: 12px 25px;
     background-color: var(--secondary-color);
     color: var(--accent-color);
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
 }
 
 .cta-button:hover {
-    opacity: 0.9;
+    background-color: var(--primary-color);
+    transition: 0.3s;
 }
 
 /* --- 6. Grid Layouts --- */
@@ -105,20 +108,14 @@ header {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    padding: 50px 5%;
-}
-
-.trips-grid { /* NEW - required separation */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 50px 5%;
+    padding: 40px 5%;
 }
 
 .card {
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
+    background-color: var(--accent-color);
 }
 
 /* --- 7. Newsletter --- */
@@ -129,6 +126,8 @@ header {
     text-align: center;
 }
 
+.newsletter h2 { color: var(--accent-color); }
+
 .newsletter form {
     display: flex;
     justify-content: center;
@@ -137,35 +136,41 @@ header {
 }
 
 .newsletter input {
-    padding: 10px;
+    padding: 12px;
     border: none;
     width: 250px;
+    border-radius: 4px;
 }
 
-/* --- 8. Trips Page Specific (MISSING BEFORE) --- */
-.trips-intro {
+/* --- 8. Contact Page Specific (AUDIT FIXES) --- */
+.section-title {
     text-align: center;
-    padding: 50px 5%;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.table-section {
-    padding: 50px 5%;
+.contact-hero-img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 4px;
 }
 
 /* --- 9. Table --- */
 .trips-table {
-    width: 90%;
-    margin: 0 auto;
+    width: 100%;
     border-collapse: collapse;
+    margin: 20px 0;
 }
 
 .trips-table th, .trips-table td {
-    padding: 12px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
 }
 
 .trips-table th {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--accent-color);
 }
 
@@ -179,30 +184,32 @@ footer {
     color: var(--accent-color);
 }
 
+footer a { color: var(--accent-color); text-decoration: none; }
+
 .socialmedia {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .socialmedia img {
-    width: 30px;
+    width: 25px;
 }
 
 /* --- 11. Responsive --- */
 @media (max-width: 800px) {
     header {
         grid-template-columns: 1fr;
+        text-align: center;
     }
 
     .nav-container {
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 15px;
     }
 
-    .hero h1,
-    .hero article {
+    .hero h1, .hero article {
         position: static;
-        text-align: center;
+        max-width: 100%;
     }
 
     .newsletter form {

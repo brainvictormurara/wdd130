@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Dry Oar Rafting</title>
-    <meta name="description" content="Contact Dry Oar Rafting for adventures at Victoria Falls, Zimbabwe. Reach out for inquiries, reservations, or feedback.">
+    <meta name="description" content="Contact Dry Oar Rafting for adventures at Victoria Falls, Zimbabwe.">
     <meta name="author" content="Brain Victor Murara">
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -27,8 +27,7 @@
         <section class="contact-details home-grid">
             <div class="company-info card">
                 <h2>Visit Our Victoria Falls Outpost</h2>
-                
-                <img src="images/history-raft.jpg" alt="Rafting at Victoria Falls" style="width: 100%; height: auto; margin-bottom: 15px; border-radius: 4px;">
+                <img src="images/history-raft.jpg" alt="Rafting at Victoria Falls" class="contact-hero-img">
                 
                 <p>📍 Victoria Falls, Zimbabwe</p>
                 <p>📞 +263 123 456 789</p>
@@ -36,11 +35,12 @@
             </div>
             
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?..." ...></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15250.77161679042!2d25.8459461!3d-17.9244439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1950a2416f4ef80b%3A0xe9f086259f91a91e!2sVictoria%20Falls!5e0!3m2!1sen!2szw!4v1649931818231!5m2!1sen!2szw" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </section>
+
         <section class="team">
-            <h2 style="text-align: center; margin-top: 40px;">Meet Our Guides</h2>
+            <h2 class="section-title">Meet Our Guides</h2>
             <div class="employee-profiles home-grid">
                 <figure class="card">
                     <img src="images/employee1.jpg" alt="Alex Riverton, Manager">
@@ -72,9 +72,9 @@
 
                 <fieldset>
                     <legend>Purpose of Message</legend>
-                    <label><input type="radio" name="purpose" value="general"> General Inquiry</label>
-                    <label><input type="radio" name="purpose" value="reservation"> Reservation Question</label>
-                    <label><input type="radio" name="purpose" value="suggestion"> Website Suggestion</label>
+                    <label><input type="radio" id="general" name="purpose" value="general"> General Inquiry</label>
+                    <label><input type="radio" id="reservation" name="purpose" value="reservation"> Reservation Question</label>
+                    <label><input type="radio" id="suggestion" name="purpose" value="suggestion"> Website Suggestion</label>
                 </fieldset>
 
                 <div class="form-item">
@@ -86,8 +86,12 @@
                     <input type="checkbox" id="subscribe" name="subscribe"> Please subscribe me to the monthly newsletter
                 </label>
 
-                <button type="submit"></button>
-                </main> <footer>
+                <button type="submit" class="cta-button">Send My Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
         <p>© 2026 Dry Oar Rafting | Brain Victor Murara</p>
         <nav class="socialmedia">
             <a href="https://facebook.com"><img src="images/facebook.png" alt="Facebook icon"></a>
