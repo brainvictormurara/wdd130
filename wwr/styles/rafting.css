@@ -1,8 +1,8 @@
 /* --- 1. Variables (STRICT 3 COLORS) --- */
 :root {
-    --primary-color: Dark Green */
-    --secondary-color: Orange */
-    --accent-color: White */
+    --primary-color: #004d40;    /* Dark Green */
+    --secondary-color: #af5000;  /* Orange */
+    --accent-color: #ffffff;     /* White */
 
     --heading-font: "Roboto", sans-serif; 
     --paragraph-font: "Arial", sans-serif;
